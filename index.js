@@ -28,7 +28,7 @@ module.exports = class Database {
 	}
 
 	async load() {
-		this.database = await low(new FileAsync((path)));
+		this.database = await low(new FileAsync((this.path)));
 
 		await this.database.defaults(mapToDefaults(this.collections)).write();
 
